@@ -1,0 +1,1 @@
+./arduino --upload --board arduino:avr:uno --port /dev/ttyUSB0 --verbose "/home/n7/Desktop/IRis/Master Side/IR Interface (Arduino)/IRis_Master/IRis_Master.ino"
