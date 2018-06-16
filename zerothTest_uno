@@ -1,0 +1,6 @@
+/home/n7/arduino-1.8.5/arduino-builder -dump-prefs -logger=machine -hardware /home/n7/arduino-1.8.5/hardware -hardware /home/n7/.arduino15/packages -hardware /home/n7/Arduino/hardware -tools /home/n7/arduino-1.8.5/tools-builder -tools /home/n7/arduino-1.8.5/hardware/tools/avr -tools /home/n7/.arduino15/packages -built-in-libraries /home/n7/arduino-1.8.5/libraries -libraries /home/n7/Arduino/libraries -fqbn=arduino:avr:uno -ide-version=10805 -build-path /tmp/arduino_build_104756 -warnings=none -build-cache /tmp/arduino_cache_36379 -prefs=build.warn_data_percentage=75 -prefs=runtime.tools.avrdude.path=/home/n7/arduino-1.8.5/hardware/tools/avr -prefs=runtime.tools.arduinoOTA.path=/home/n7/arduino-1.8.5/hardware/tools/avr -prefs=runtime.tools.avr-gcc.path=/home/n7/arduino-1.8.5/hardware/tools/avr -verbose /home/n7/arduino-1.8.5/examples/11.ArduinoISP/ArduinoISP/ArduinoISP.ino
+
+
+./arduino --upload --board arduino:avr:uno --port /dev/ttyUSB0 --verbose "/home/n7/Desktop/IRis/Master Side/IR Interface (Arduino)/IRis_Master/IRis_Master.ino"
+
+os.system('./arduino --upload --board arduino:avr:uno --port /dev/ttyUSB0 --verbose "/home/n7/Desktop/IRis/Master Side/IR Interface (Arduino)/IRis_Master/IRis_Master.ino"')

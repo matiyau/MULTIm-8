@@ -1,0 +1,15 @@
+/home/n7/arduino-1.8.5/arduino-builder -dump-prefs -logger=machine -hardware /home/n7/arduino-1.8.5/hardware -hardware /home/n7/.arduino15/packages -hardware /home/n7/Arduino/hardware -tools /home/n7/arduino-1.8.5/tools-builder -tools /home/n7/arduino-1.8.5/hardware/tools/avr -tools /home/n7/.arduino15/packages -built-in-libraries /home/n7/arduino-1.8.5/libraries -libraries /home/n7/Arduino/libraries -fqbn=attiny:avr:ATtinyX5:cpu=attiny85,clock=internal8 -ide-version=10805 -build-path /tmp/arduino_build_992169 -warnings=none -build-cache /tmp/arduino_cache_36379 -prefs=build.warn_data_percentage=75 -prefs=runtime.tools.avrdude.path=/home/n7/arduino-1.8.5/hardware/tools/avr -prefs=runtime.tools.arduinoOTA.path=/home/n7/arduino-1.8.5/hardware/tools/avr -prefs=runtime.tools.avr-gcc.path=/home/n7/arduino-1.8.5/hardware/tools/avr -verbose /home/n7/Desktop/IRis/Slave Side/IRis_Slave/IRis_Slave.ino
+
+./arduino --upload --board attiny:avr:ATtinyX5:"cpu=attiny85,clock=internal8" --port /dev/ttyUSB0 --useprogrammer --verbose --preserve-temp-files "/home/n7/Desktop/IRis/Slave Side/IRis_Slave/IRis_Slave.ino"
+
+
+After generating hex
+/home/n7/arduino-1.8.5/hardware/tools/avr/bin/avrdude -C/home/n7/arduino-1.8.5/hardware/tools/avr/etc/avrdude.conf -v -pattiny85 -cstk500v1 -P/dev/ttyUSB0 -b19200 -Uflash:w:/tmp/arduino_build_992169/IRis_Slave.ino.hex:i
+
+Burn Bootloader
+/home/n7/arduino-1.8.5/hardware/tools/avr/bin/avrdude -C/home/n7/arduino-1.8.5/hardware/tools/avr/etc/avrdude.conf -v -v -v -v -pattiny85 -cstk500v1 -P/dev/ttyUSB0 -b19200 -e -Uefuse:w:0xff:m -Uhfuse:w:0xdf:m -Ulfuse:w:0xe2:m 
+
+
+
+
+
