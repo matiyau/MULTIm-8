@@ -1,14 +1,14 @@
 #Compile HEX For Arduino Uno
-./arduino --verify --board arduino:avr:uno --pref build.path=/tmp/MULTIm-8_Uno --preserve-temp-files  --verbose "/home/n7/Desktop/IRis/Master Side/IR Interface (Arduino)/IRis_Master/IRis_Master.ino"
+./arduino --verify --preserve-temp-files --verbose --board arduino:avr:uno --pref build.path=/tmp/MULTIm-8_Uno "/home/n7/Desktop/IRis/Master Side/IR Interface (Arduino)/IRis_Master/IRis_Master.ino"
 
 #Burn HEX To Arduino Uno
 ./hardware/tools/avr/bin/avrdude -C /home/n7/arduino-1.8.5/hardware/tools/avr/etc/avrdude.conf -v -p atmega328p -c arduino -P /dev/ttyUSB0 -b 115200 -D -Uflash:w:/tmp/MULTIm-8_Uno/IRis_Master.ino.hex:i
 
 #Compile HEX For ATtiny85
-./arduino --upload --board attiny:avr:ATtinyX5:cpu=attiny85,clock=internal8 --pref build.path=/tmp/MULTIm-8_ATtiny85 --preserve-temp-files --verbose "/home/n7/Desktop/IRis/Slave Side/IRis_Slave/IRis_Slave.ino"
+./arduino --verify --preserve-temp-files --verbose --board attiny:avr:ATtinyX5:cpu=attiny85,clock=internal8 --pref build.path=/tmp/MULTIm-8_ATtiny85 "/home/n7/Desktop/IRis/Slave Side/IRis_Slave/IRis_Slave.ino"
 
 #Burn Bootloader To ATtiny85
-./hardware/tools/avr/bin/avrdude -C /home/n7/arduino-1.8.5/hardware/tools/avr/etc/avrdude.conf -v -v -v -v -p attiny85 -c stk500v1 -P/dev/ttyUSB0 -b 19200 -e -Uefuse:w:0xff:m -Uhfuse:w:0xdf:m -Ulfuse:w:0xe2:m 
+./hardware/tools/avr/bin/avrdude -C /home/n7/arduino-1.8.5/hardware/tools/avr/etc/avrdude.conf -v -v -v -v -p attiny85 -c stk500v1 -P /dev/ttyUSB0 -b 19200 -e -Uefuse:w:0xff:m -Uhfuse:w:0xdf:m -Ulfuse:w:0xe2:m 
 
 #Burn HEX To ATtiny85
 ./hardware/tools/avr/bin/avrdude -C /home/n7/arduino-1.8.5/hardware/tools/avr/etc/avrdude.conf -v -p attiny85 -c stk500v1 -P /dev/ttyUSB0 -b 19200 -Uflash:w:/tmp/MULTIm-8_ATtiny85/IRis_Slave.ino.hex:i
