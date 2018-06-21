@@ -214,10 +214,10 @@ while True:
             break
 
 for i in range(0, ICcount) :
-    mst_codeEdit(mst_code, i)
+    mst_codeEdit(mst_code, ICstart + i)
     slv_codeEdit(slv_code, UIDstart + i)
 
-    print "\nIC : " + str(i) + ", UID : " + str(UIDstart + i)
+    print "\nIC : " + str(ICstart + i) + ", UID : " + str(UIDstart + i)
         
     #Compile Code For Master
     mst_cmplRslt = os.system(mst_compile)
@@ -244,12 +244,12 @@ for i in range(0, ICcount) :
     slv_btldRslt = os.system(slv_bootloader)
     if slv_btldRslt :
         print "Burning Of Bootloader To Slave Failed With Error Code : " + str(slv_btldRslt)
-        exit()
+        continue
     print "Bootloader Burnt To Slave"
 
     #Upload Code To Slave
     slv_upldRslt = os.system(slv_upload)
     if slv_upldRslt :
         print "Upload To Slave Failed With Error Code : " + str(slv_upldRslt)
-        exit()
+        continue
     print "Uploaded HEX To Slave"
