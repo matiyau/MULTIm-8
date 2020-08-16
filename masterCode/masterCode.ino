@@ -160,15 +160,15 @@ static BitBangedSPI SPI;
 void setup() {
 // MULTIm-8 Starts Here
 pinMode(A0, OUTPUT);
-digitalWrite(A0, 1);
+digitalWrite(A0, 0);
 pinMode(A1, OUTPUT);
-digitalWrite(A1, 1);
+digitalWrite(A1, 0);
 pinMode(A2, OUTPUT);
-digitalWrite(A2, 1);
+digitalWrite(A2, 0);
 pinMode(A3, OUTPUT);
-digitalWrite(A3, 1);
+digitalWrite(A3, 0);
 pinMode(A4, OUTPUT);
-digitalWrite(A4, 0);
+digitalWrite(A4, 1);
 // MULTIm-8 Ends Here
   SERIAL.begin(BAUDRATE);
 }
